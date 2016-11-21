@@ -172,6 +172,18 @@
               "backendPort": "[variables('natBackendPort')]"
             }
           },
+           {
+            "name": "natpooltileserver",
+            "properties": {
+              "frontendIPConfiguration": {
+                "id": "[variables('frontEndIPConfigID')]"
+              },
+              "protocol": "tcp",
+              "frontendPortRangeStart": "8080",
+              "frontendPortRangeEnd": "8200",
+              "backendPort": "80"
+            }
+          }
           {
             "name": "natpool2",
             "properties": {
