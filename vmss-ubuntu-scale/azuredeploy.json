@@ -183,7 +183,7 @@
               "frontendPortRangeEnd": "8200",
               "backendPort": "80"
             }
-          }
+          },
           {
             "name": "natpool2",
             "properties": {
