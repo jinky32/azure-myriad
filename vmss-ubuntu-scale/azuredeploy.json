@@ -264,7 +264,16 @@
               "type": "DockerExtension",
               "typeHandlerVersion": "1.0",
               "autoUpgradeMinorVersion": true,
-              "settings": {}
+              "settings": {
+                "compose": {
+                 "wddocker": {
+                  "image": "klokantech/tileserver-gl:latest",
+                  "ports": [
+                  "8080:80"
+                   ],
+               }
+             }
+            }
             }
           },
               {
