@@ -181,7 +181,7 @@
               "protocol": "tcp",
               "frontendPortRangeStart": "8080",
               "frontendPortRangeEnd": "8200",
-              "backendPort": "80"
+              "backendPort": "8080"
             }
           },
           {
