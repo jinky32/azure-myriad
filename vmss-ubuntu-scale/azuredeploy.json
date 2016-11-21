@@ -86,20 +86,6 @@
     "storageApiVersion": "2016-01-01",
     "insightsApiVersion": "2015-04-01"
   },
-  "extensionProfile": {
-        "extensions": [
-          {
-            "name": "docker",
-            "properties": {
-              "publisher": "Microsoft.Azure.Extensions",
-              "type": "DockerExtension",
-              "typeHandlerVersion": "1.0",
-              "autoUpgradeMinorVersion": true,
-              "settings": {}
-            }
-          }
-        ]
-      },
   "resources": [
     {
       "type": "Microsoft.Network/virtualNetworks",
@@ -236,6 +222,20 @@
             "adminUsername": "[parameters('adminUsername')]",
             "adminPassword": "[parameters('adminPassword')]"
           },
+            "extensionProfile": {
+        "extensions": [
+          {
+            "name": "docker",
+            "properties": {
+              "publisher": "Microsoft.Azure.Extensions",
+              "type": "DockerExtension",
+              "typeHandlerVersion": "1.0",
+              "autoUpgradeMinorVersion": true,
+              "settings": {}
+            }
+          }
+        ]
+      },
           "networkProfile": {
             "networkInterfaceConfigurations": [
               {
