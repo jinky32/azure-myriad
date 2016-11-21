@@ -222,20 +222,6 @@
             "adminUsername": "[parameters('adminUsername')]",
             "adminPassword": "[parameters('adminPassword')]"
           },
-            "extensionProfile": {
-        "extensions": [
-          {
-            "name": "docker",
-            "properties": {
-              "publisher": "Microsoft.Azure.Extensions",
-              "type": "DockerExtension",
-              "typeHandlerVersion": "1.0",
-              "autoUpgradeMinorVersion": true,
-              "settings": {}
-            }
-          }
-        ]
-      },
           "networkProfile": {
             "networkInterfaceConfigurations": [
               {
@@ -271,6 +257,16 @@
           },
           "extensionProfile": {
             "extensions": [
+              {
+            "name": "docker",
+            "properties": {
+              "publisher": "Microsoft.Azure.Extensions",
+              "type": "DockerExtension",
+              "typeHandlerVersion": "1.0",
+              "autoUpgradeMinorVersion": true,
+              "settings": {}
+            }
+          },
               {
                 "name": "lapextension",
                 "properties": {
