@@ -282,7 +282,7 @@
                   "image": "klokantech/tileserver-gl:latest",
                   "ports": [
                   "8080:80"
-                   ],
+                   ]
                }
              }
             }
