@@ -206,7 +206,7 @@
                 "id": "[variables('frontEndIPConfigID')]"
               },
               "backendAddressPool": {
-                "id": "[variables('bepool')]"
+                "id": "[variables('bePoolName')]"
               },
               "protocol": "tcp",
               "frontendPort": 80,
