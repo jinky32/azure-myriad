@@ -198,7 +198,7 @@
             }
           }
         ],
-                "loadBalancingRules":
+                "loadBalancingRules": [
           {
             "name": "LBRule",
             "properties": {
@@ -206,14 +206,31 @@
                 "id": "[variables('frontEndIPConfigID')]"
               },
               "backendAddressPool": {
-                "id": "[variables('bePoolName')]"
+                "id": "[variables('lbPoolID')]"
+                "id": "[variables('bepool')]"
               },
               "protocol": "tcp",
-              "frontendPort": 8080,
-              "backendPort": 8080,
-              "enableFloatingIP": false
+              "frontendPort": 80,
+              "backendPort": 80,
+              "enableFloatingIP": false,
+              "idleTimeoutInMinutes": 5,
+              "probe": {
+                "id": "[variables('lbProbeID')]"
+              }
             }
           }
+        ],
+        "probes": [
+          {
+            "name": "tcpProbe",
+            "properties": {
+              "protocol": "tcp",
+              "port": 80,
+              "intervalInSeconds": 5,
+              "numberOfProbes": 2
+            }
+          }
+        ]
       }
     },
     {
