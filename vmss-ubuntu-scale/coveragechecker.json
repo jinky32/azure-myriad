@@ -198,7 +198,7 @@
             }
           }
         ],
-                "loadBalancingRules": [
+                "loadBalancingRules":
           {
             "name": "LBRule",
             "properties": {
@@ -211,11 +211,9 @@
               "protocol": "tcp",
               "frontendPort": 8080,
               "backendPort": 8080,
-              "enableFloatingIP": false,
-              "idleTimeoutInMinutes": 5,
+              "enableFloatingIP": false
             }
           }
-        ]
       }
     },
     {
