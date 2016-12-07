@@ -3,9 +3,39 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
 
-
-
-
+    "vmSku": {
+      "type": "string",
+      "defaultValue": "Standard_D1",
+      "metadata": {
+        "description": "Size of VMs in the VM Scale Set."
+      }
+    },
+    "vmssName": {
+      "type": "string",
+      "metadata": {
+        "description": "String used as a base for naming resources (9 characters or less). A hash is prepended to this string for some resources, and resource-specific information is appended."
+      },
+      "maxLength": 9
+    },
+    "instanceCount": {
+      "type": "int",
+      "metadata": {
+        "description": "Number of VM instances (100 or less)."
+      },
+      "maxValue": 100
+    },
+    "adminUsername": {
+      "type": "string",
+      "metadata": {
+        "description": "Admin username on all VMs."
+      }
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Admin password on all VMs."
+      }
+    },
 	"ThreeLoadBalancer": {
       "type": "string",
       "metadata": {
@@ -40,39 +70,6 @@
       "type": "string",
       "metadata": {
        "description": "ThreeDMZNSG"
-      }
-    },
-    "vmSku": {
-      "type": "string",
-      "defaultValue": "Standard_D1",
-      "metadata": {
-        "description": "Size of VMs in the VM Scale Set."
-      }
-    },
-    "vmssName": {
-      "type": "string",
-      "metadata": {
-        "description": "String used as a base for naming resources (9 characters or less). A hash is prepended to this string for some resources, and resource-specific information is appended."
-      },
-      "maxLength": 9
-    },
-    "instanceCount": {
-      "type": "int",
-      "metadata": {
-        "description": "Number of VM instances (100 or less)."
-      },
-      "maxValue": 100
-    },
-    "adminUsername": {
-      "type": "string",
-      "metadata": {
-        "description": "Admin username on all VMs."
-      }
-    },
-    "adminPassword": {
-      "type": "securestring",
-      "metadata": {
-        "description": "Admin password on all VMs."
       }
     }
   },
